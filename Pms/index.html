@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Mods Studios — Bases de Carros</title>
+  <meta name="description" content="Prime Mods Studios: bases de carros para o seu servidor. Entrega em até 24 horas. Base pequena R$40, média R$50, grande R$70. Dúvidas via Discord.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Prime Mods Studios — Bases de Carros">
+  <meta property="og:description" content="Bases de carros com entrega em até 24 horas. Peça a sua via Discord.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="PMS.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Dados estruturados: ajuda buscadores a entenderem o negócio e os preços -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Prime Mods Studios",
+    "description": "Estúdio de criação de bases de carros para servidores.",
+    "logo": "PMS.png",
+    "sameAs": ["https://discord.gg/5PvdEU5raC"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Bases Prime Mods Studios",
+    "itemListElement": [
+      {"@type":"Product","position":1,"name":"Base Pequena","description":"Base de carro pequena.","offers":{"@type":"Offer","priceCurrency":"BRL","price":"40","availability":"https://schema.org/InStock"}},
+      {"@type":"Product","position":2,"name":"Base Média","description":"Base de carro média.","offers":{"@type":"Offer","priceCurrency":"BRL","price":"50","availability":"https://schema.org/InStock"}},
+      {"@type":"Product","position":3,"name":"Base Grande","description":"Base de carro grande.","offers":{"@type":"Offer","priceCurrency":"BRL","price":"70","availability":"https://schema.org/InStock"}}
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --preto:#0a0a0a;
+      --preto-2:#111111;
+      --preto-3:#181818;
+      --vermelho:#e10600;
+      --vermelho-escuro:#8b0000;
+      --branco:#ffffff;
+      --cinza:#9a9a9a;
+      --borda:#262626;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      background:var(--preto);
+      color:var(--branco);
+      font-family:'Inter',sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+
+    img{max-width:100%;display:block}
+
+    .container{width:min(1100px,92%);margin:0 auto}
+
+    /* ---------- Barra de aviso ---------- */
+    .aviso{
+      background:linear-gradient(90deg,var(--vermelho-escuro),var(--vermelho));
+      text-align:center;
+      padding:.55rem 1rem;
+      font-size:.85rem;
+      font-weight:500;
+      letter-spacing:.3px;
+    }
+    .aviso a{color:var(--branco);font-weight:700;text-decoration:none}
+    .aviso a:hover{text-decoration:underline}
+
+    /* ---------- Cabeçalho ---------- */
+    header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(10,10,10,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--borda);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:.8rem 0;
+    }
+    .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+    .nav-logo img{height:52px;width:auto}
+    .nav-logo span{
+      font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+      text-transform:uppercase;letter-spacing:1px;color:var(--branco);
+    }
+    .nav-logo span b{color:var(--vermelho)}
+    nav ul{display:flex;gap:1.8rem;list-style:none;align-items:center}
+    nav a{
+      color:var(--cinza);text-decoration:none;font-size:.9rem;font-weight:500;
+      text-transform:uppercase;letter-spacing:.8px;transition:color .2s;
+    }
+    nav a:hover{color:var(--branco)}
+    .btn-discord{
+      display:inline-flex;align-items:center;gap:.5rem;
+      background:var(--vermelho);color:var(--branco)!important;
+      padding:.55rem 1.1rem;border-radius:4px;font-weight:600;
+      transition:background .2s,transform .15s;
+    }
+    .btn-discord:hover{background:var(--vermelho-escuro);transform:translateY(-2px)}
+
+    /* ---------- Hero ---------- */
+    .hero{position:relative}
+    .hero-banner{
+      width:100%;
+      background:url('PMS-BANNER.png') center/cover no-repeat;
+      min-height:clamp(320px,55vh,560px);
+      display:flex;align-items:center;
+    }
+    .hero-banner::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(10,10,10,.15) 0%,rgba(10,10,10,.55) 70%,var(--preto) 100%);
+    }
+    .hero-content{position:relative;z-index:2;padding:3rem 0}
+    .hero-content .tag{
+      display:inline-block;background:rgba(225,6,0,.15);border:1px solid var(--vermelho);
+      color:var(--vermelho);font-family:'Oswald',sans-serif;font-size:.8rem;
+      letter-spacing:2px;text-transform:uppercase;padding:.3rem .8rem;border-radius:3px;margin-bottom:1rem;
+    }
+    .hero-content h1{
+      font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;font-weight:700;max-width:14ch;
+    }
+    .hero-content h1 em{color:var(--vermelho);font-style:normal}
+    .hero-content p{color:#cfcfcf;max-width:52ch;margin:1rem 0 1.8rem;font-size:1.05rem}
+    .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
+      font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;
+      font-weight:600;padding:.85rem 1.6rem;border-radius:4px;font-size:.95rem;
+      transition:transform .15s,background .2s,border-color .2s;
+    }
+    .btn-primary{background:var(--vermelho);color:var(--branco)}
+    .btn-primary:hover{background:var(--vermelho-escuro);transform:translateY(-2px)}
+    .btn-ghost{border:1px solid var(--borda);color:var(--branco);background:transparent}
+    .btn-ghost:hover{border-color:var(--vermelho);transform:translateY(-2px)}
+
+    /* ---------- Seções ---------- */
+    section{padding:5rem 0;position:relative}
+    .section-head{max-width:640px;margin-bottom:3rem}
+    .kicker{
+      font-family:'Oswald',sans-serif;color:var(--vermelho);letter-spacing:3px;
+      text-transform:uppercase;font-size:.85rem;display:block;margin-bottom:.6rem;
+    }
+    .section-head h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700}
+    .section-head p{color:var(--cinza);margin-top:.8rem}
+
+    /* Sobre */
+    #sobre{background:var(--preto-2);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+    .sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    .sobre-logo{
+      background:var(--preto);border:1px solid var(--borda);border-radius:8px;
+      padding:2rem;display:flex;justify-content:center;
+    }
+    .sobre-logo img{width:min(320px,80%);height:auto}
+    .sobre-texto p{color:#cfcfcf;margin-bottom:1.2rem}
+    .sobre-texto strong{color:var(--branco)}
+    .destaques{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+    .destaque{
+      background:var(--preto-3);border:1px solid var(--borda);border-left:3px solid var(--vermelho);
+      padding:1rem;border-radius:6px;
+    }
+    .destaque h3{font-size:1rem;color:var(--vermelho);margin-bottom:.3rem}
+    .destaque p{font-size:.85rem;color:var(--cinza);margin:0}
+
+    /* Preços */
+    .precos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .card{
+      background:var(--preto-2);border:1px solid var(--borda);border-radius:10px;
+      padding:2.2rem 1.8rem;position:relative;transition:transform .2s,border-color .2s;
+      overflow:hidden;
+    }
+    .card::before{
+      content:"";position:absolute;top:0;left:0;right:0;height:3px;
+      background:var(--borda);transition:background .2s;
+    }
+    .card:hover{transform:translateY(-6px);border-color:#3a3a3a}
+    .card:hover::before{background:var(--vermelho)}
+    .card.destaque-card{border-color:var(--vermelho)}
+    .card.destaque-card::before{background:var(--vermelho)}
+    .selo{
+      position:absolute;top:1rem;right:1rem;background:var(--vermelho);color:var(--branco);
+      font-family:'Oswald',sans-serif;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;
+      padding:.25rem .7rem;border-radius:3px;
+    }
+    .card h3{font-size:1.4rem;margin-bottom:.4rem}
+    .card .desc{color:var(--cinza);font-size:.9rem;min-height:2.6em}
+    .preco{
+      font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:var(--branco);
+      margin:1rem 0 .2rem;line-height:1;
+    }
+    .preco small{font-size:1rem;color:var(--cinza);font-weight:400}
+    .card .entrega{color:var(--cinza);font-size:.85rem;margin-bottom:1.5rem}
+    .card .entrega b{color:var(--vermelho)}
+    .card .btn{width:100%;justify-content:center}
+
+    /* Entrega / prazo */
+    .prazo-box{
+      margin-top:2.5rem;background:var(--preto-3);border:1px solid var(--borda);
+      border-left:4px solid var(--vermelho);border-radius:8px;padding:1.6rem 1.8rem;
+      display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;
+    }
+    .prazo-box .icone{
+      width:52px;height:52px;flex-shrink:0;border-radius:50%;
+      background:rgba(225,6,0,.12);border:1px solid var(--vermelho);
+      display:flex;align-items:center;justify-content:center;font-size:1.5rem;
+    }
+    .prazo-box h3{font-size:1.15rem;color:var(--branco)}
+    .prazo-box p{color:var(--cinza);font-size:.95rem}
+
+    /* Contato */
+    #contato{background:var(--preto-2);border-top:1px solid var(--borda)}
+    .contato-wrap{
+      display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;
+      background:linear-gradient(135deg,var(--preto-3),#141414);
+      border:1px solid var(--borda);border-radius:12px;padding:2.5rem;
+    }
+    .contato-wrap h2{font-size:clamp(1.6rem,3.5vw,2.4rem)}
+    .contato-wrap p{color:var(--cinza);margin:.6rem 0 0;max-width:48ch}
+    .contato-wrap .btn{white-space:nowrap}
+
+    /* Rodapé */
+    footer{border-top:1px solid var(--borda);padding:2.5rem 0;background:var(--preto)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+    .footer-inner img{height:56px}
+    .footer-copy{color:var(--cinza);font-size:.85rem;text-align:center;width:100%}
+    .footer-copy a{color:var(--vermelho);text-decoration:none}
+    .footer-copy a:hover{text-decoration:underline}
+
+    /* Marca d'água sutil de fundo */
+    .marca-fundo{
+      position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.04;
+      background:url('PMS-Marca-D-agua.png') center/contain no-repeat;
+    }
+    .container{position:relative;z-index:1}
+
+    /* ---------- Responsivo ---------- */
+    @media(max-width:860px){
+      .sobre-grid{grid-template-columns:1fr;gap:2rem}
+      .precos-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+      .destaques{grid-template-columns:1fr}
+      .contato-wrap{grid-template-columns:1fr;text-align:center;justify-items:center}
+    }
+    @media(max-width:640px){
+      nav ul{gap:1rem}
+      nav a:not(.btn-discord){display:none}
+      section{padding:3.5rem 0}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="aviso">
+    ⚡ Entrega em <strong>até 24 horas</strong> — garanta a sua base agora:
+    <a href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Discord</a>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="nav-logo" href="#topo" aria-label="Prime Mods Studios — início">
+        <img src="PMS.png" alt="Logo Prime Mods Studios">
+        <span>Prime <b>Mods</b></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#valores">Valores</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a class="btn-discord" href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Discord</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- HERO -->
+    <section class="hero" style="padding:0">
+      <div class="hero-banner" role="img" aria-label="Banner Prime Mods Studios com carro esportivo">
+        <div class="container hero-content">
+          <span class="tag">Estúdio de bases</span>
+          <h1>Bases de carros com <em>qualidade</em> e entrega rápida.</h1>
+          <p>A Prime Mods Studios cria bases para o seu servidor com acabamento profissional e prazo garantido de até 24 horas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#valores">Ver valores</a>
+            <a class="btn btn-ghost" href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Falar no Discord</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="marca-fundo"></div>
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Quem somos</span>
+          <h2>A Prime Mods Studios</h2>
+        </div>
+        <div class="sobre-grid">
+          <div class="sobre-texto">
+            <p>Somos a <strong>Prime Mods Studios</strong>, um estúdio especializado na criação de <strong>bases de carros</strong> para servidores. Nosso foco é entregar produtos limpos, bem acabados e prontos para uso, com o padrão visual que a nossa marca representa.</p>
+            <p>Cada base é feita com atenção aos detalhes, seguindo o estilo agressivo e profissional que você já conhece do nosso logo. Você pede, a gente entrega — rápido e sem complicação.</p>
+            <div class="destaques">
+              <div class="destaque">
+                <h3>Qualidade</h3>
+                <p>Bases com acabamento profissional e visual caprichado.</p>
+              </div>
+              <div class="destaque">
+                <h3>Velocidade</h3>
+                <p>Prazo de entrega de até 24 horas após o pedido.</p>
+              </div>
+              <div class="destaque">
+                <h3>Suporte</h3>
+                <p>Qualquer dúvida, é só chamar a gente no Discord.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sobre-logo">
+            <img src="PMS.png" alt="Logotipo completo da Prime Mods Studios">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALORES -->
+    <section id="valores">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Valores</span>
+          <h2>Escolha a sua base</h2>
+          <p>Preços simples e transparentes. Todas as bases têm entrega em até 24 horas.</p>
+        </div>
+
+        <div class="precos-grid">
+          <article class="card">
+            <h3>Base Pequena</h3>
+            <p class="desc">Ideal para quem quer começar com uma base enxuta e funcional.</p>
+            <div class="preco">R$ 40</div>
+            <p class="entrega">Entrega em <b>até 24h</b></p>
+            <a class="btn btn-ghost" href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Pedir no Discord</a>
+          </article>
+
+          <article class="card destaque-card">
+            <span class="selo">Mais pedida</span>
+            <h3>Base Média</h3>
+            <p class="desc">O equilíbrio perfeito entre tamanho e recursos para o seu servidor.</p>
+            <div class="preco">R$ 50</div>
+            <p class="entrega">Entrega em <b>até 24h</b></p>
+            <a class="btn btn-primary" href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Pedir no Discord</a>
+          </article>
+
+          <article class="card">
+            <h3>Base Grande</h3>
+            <p class="desc">Para projetos maiores, com mais espaço e capacidade.</p>
+            <div class="preco">R$ 70</div>
+            <p class="entrega">Entrega em <b>até 24h</b></p>
+            <a class="btn btn-ghost" href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Pedir no Discord</a>
+          </article>
+        </div>
+
+        <div class="prazo-box">
+          <div class="icone">⏱️</div>
+          <div>
+            <h3>Prazo de entrega</h3>
+            <p>Todas as bases são entregues em <strong style="color:var(--vermelho)">até 24 horas</strong> após a confirmação do pedido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="container">
+        <div class="contato-wrap">
+          <div>
+            <span class="kicker">Fale conosco</span>
+            <h2>Tem alguma dúvida?</h2>
+            <p>Entre em contato pelo nosso Discord. É lá que você faz o seu pedido, tira dúvidas e acompanha a entrega da sua base.</p>
+          </div>
+          <a class="btn btn-primary" href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Abrir Discord →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <img src="PMS.png" alt="Logo Prime Mods Studios">
+      <p class="footer-copy">
+        © 2026 Prime Mods Studios — Todos os direitos reservados.<br>
+        Dúvidas? Fale conosco no <a href="https://discord.gg/5PvdEU5raC" target="_blank" rel="noopener">Discord</a>.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
